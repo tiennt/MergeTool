@@ -1,6 +1,7 @@
 package com.hailv.mergetool.model;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 
@@ -45,8 +46,15 @@ public class EegFile {
 	public void moveToFrameAt(long t) throws Exception {
 		long numofMili = t - startTime;
 		long line = numofMili * 128 / 1000;
+		System.out.println("EEG: " + line);
 		for (int i = 0; i < line - 1; i++) {
 			br.readLine();
+		}
+	}
+	
+	public void close() throws IOException {
+		if (br != null) {
+			br.close();
 		}
 	}
 	
