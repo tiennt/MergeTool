@@ -144,10 +144,10 @@ public class MergeTool {
 			// System.out.println("Delta: " + delta);
 
 			if (res != null) {
-				pr.write(String.format("%s %s %s %s %s\n", tag,
+				pr.write(String.format("%12s\t %30s\t %30s\t %30s\t %30s\t\n", tag,
 						SDF.format(time), res.getData(), eeg1, record.getData()));
 			} else {
-				pr.write(String.format("%s %s %s %s\n", tag, SDF.format(time),
+				pr.write(String.format("%12s\t %30s\t %30s\t %30s\t %30s\t\n", tag, SDF.format(time), "N/A",
 						eeg1, record.getData()));
 			}
 			record = physiology.nextLine();
@@ -183,10 +183,10 @@ public class MergeTool {
 			}
 
 			if (res != null) {
-				pr.write(String.format("%s %s %s %s %s\n", tag,
+				pr.write(String.format("%12s\t %30s\t %30s\t %30s\t %30s\t\n", tag,
 						SDF.format(time), res.getData(), eeg1, record.getData()));
 			} else {
-				pr.write(String.format("%s %s %s %s\n", tag, SDF.format(time),
+				pr.write(String.format("%12s\t %30s\t %30s\t %30s\t %30s\t\n", tag, SDF.format(time), "N/A",
 						eeg1, record.getData()));
 			}
 		}
