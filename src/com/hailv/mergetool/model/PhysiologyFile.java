@@ -67,7 +67,7 @@ public class PhysiologyFile {
 	public void moveToFrameAt(long t) throws Exception {
 		long numofMili = t - startTime;
 		long line = numofMili * 256 / 1000;
-		System.out.println("PHY: " + line);
+//		System.out.println("PHY: " + line);
 		for (int i = 0; i < line; i++) {
 			br.readLine();
 		}

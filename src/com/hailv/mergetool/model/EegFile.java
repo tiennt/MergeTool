@@ -46,7 +46,7 @@ public class EegFile {
 	public void moveToFrameAt(long t) throws Exception {
 		long numofMili = t - startTime;
 		long line = numofMili * 128 / 1000;
-		System.out.println("EEG: " + line);
+//		System.out.println("EEG: " + line);
 		for (int i = 0; i < line - 1; i++) {
 			br.readLine();
 		}
